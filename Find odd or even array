@@ -1,0 +1,32 @@
+a=[1,2,3,4,5,6,7,8,9,10]
+def findevenodd(array):
+    print(array)
+    print(a)
+    odd=[]
+    even=[]
+    for i in array:
+        if i%2 == 0:
+            even.append(i)
+        else:
+            odd.append(i)
+    print(odd)
+    print(even)
+    result={}
+    result["odd"]=odd
+    result["even"]=even
+    return result
+c=findevenodd(a)
+print(c)
+
+
+def returneven(arr):
+    l=arr['even']
+    return l
+e=returneven(c)
+print("even:" , e)
+
+def returnodd(arr):
+    p=arr['odd']
+    return p
+o=returnodd(c)
+print("odd:" , o)
