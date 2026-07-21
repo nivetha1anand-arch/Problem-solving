@@ -1,0 +1,67 @@
+#1.reverse the words in a string-------------------------------
+s = "python is easy"
+words = s.split()
+result = []
+
+for i in words:
+    result.append(i[::-1])
+print(" ".join(result))
+
+#1.practice
+s = "Nivetha Deepan"
+words = s.split()
+result = []
+for i in words:
+    result.append(i[::-1])
+print(" ".join(result))
+
+#2.Find Missing Number-------------------------------------------------------
+arr = [1, 2, 3, 5, 6]
+n = 6
+total = n * (n + 1) // 2
+arr_sum= sum(arr)
+print(total - arr_sum)
+
+#2.practice
+arr = [1,2,3,4,5,7,8,9]
+n = 9
+total = n * (n + 1) // 2
+arr_sum = sum(arr)
+print(total - arr_sum)
+
+#3.count character frequency-------------------------------------------------------
+s = "hello world I am Nivetha Anandhakannans daughter"
+char_freq = {}
+for char in s:
+    if char in char_freq:
+        char_freq[char] += 1
+    else:
+        char_freq[char] = 1
+print(char_freq)
+
+#3. printing same output in table format-----------------------------------------
+s = "hello world I am Nivetha Anandhakannans daughter"
+dic = {}
+for i in s:
+    if i in dic:
+        dic[i] += 1
+    else:
+        dic[i] = 1
+
+print("Character\tFrequency")
+print("--------------------")
+for char, freq in dic.items():
+    print(f"{char}\t\t{freq}") 
+    
+4.second largest number in a list-------------------------------------------------------
+n = [10, 5, 8, 12, 3]
+l = float('-inf')
+s = float('-inf')
+for i in n:
+    if i > l:
+        s = l
+        l = i
+    elif l > i > s:
+        s = i
+print("Second largest number:", s)
+
