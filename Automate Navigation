@@ -1,0 +1,28 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
+
+driver= webdriver.Chrome()
+
+url="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+driver.get(url)
+time.sleep(3)
+
+driver.maximize_window()
+
+#clicking forgot password link- to navigate
+link=driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[4]/p') 
+
+link.click()
+time.sleep(3)
+
+driver.back()
+time.sleep(3)
+
+driver.forward()
+time.sleep(3)
+
+driver.refresh()
+time.sleep(3)
+
+driver.close()
